@@ -344,5 +344,5 @@ SpectraVault runs several automated workers to keep the platform healthy and com
 ---
 
 <p align="center">
-  Built with ❤️ by the SpectraEYE Team
+  **Built with ❤️ by the SpectraEYE Team**
 </p>
