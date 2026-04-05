@@ -36,7 +36,6 @@
 - [Admin Console](#-admin-console)
 - [Background Operations](#-background-operations)
 - [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
 
 ---
 
