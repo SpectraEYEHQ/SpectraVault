@@ -1,7 +1,7 @@
 <h1 align="center">SpectraVault</h1>
 
 <p align="center">
-  <strong>Enterprise-grade secure document management — built for teams that take data seriously.</strong>
+  <strong>💾 Enterprise-grade secure document management — built for teams that take data seriously.</strong>
 </p>
 
 <p align="center">
