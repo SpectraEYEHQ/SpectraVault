@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="public/images/logo.png" alt="SpectraVault Logo" width="120" />
-</p>
-
 <h1 align="center">SpectraVault</h1>
 
 <p align="center">
