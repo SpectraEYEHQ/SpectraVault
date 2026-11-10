@@ -9,8 +9,8 @@
   <a href="#-work-with-documents">Documents</a> ·
   <a href="#-share-and-collaborate">Collaboration</a> ·
   <a href="#-manage-your-organization">Organization</a> ·
-  <a href="#-get-started">Get started</a> ·
-  <a href="#-changes-in-the-staging-release">Staging release</a>
+  <a href="#-plans-and-renewals">Plans and renewals</a> ·
+  <a href="#-get-started">Get started</a>
 </p>
 
 ---
@@ -26,6 +26,18 @@ SpectraVault gives your team one workspace to organize documents, review work, a
 - **Label your work.** Use tags and classifications to help teammates find documents and understand how they should be handled.
 - **Manage the file lifecycle.** Import supported archives, move material out of active work with **Archives**, and restore deleted items from **Trash** during your organization's retention period.
 
+### Document lifecycle
+
+```mermaid
+flowchart TD
+    Upload["Upload files or import an archive"] --> Organize["Organize and classify"]
+    Organize --> Work["Preview or update a document"]
+    Work --> Review["Request approval when needed"]
+    Work --> Archive["Archive material to keep"]
+    Work --> Trash["Move material to Trash"]
+    Trash --> Restore["Restore during the retention period"]
+```
+
 ## 🤝 Share and collaborate
 
 - **Share with teammates.** Give access to files and folders according to roles, group memberships, and item permissions.
@@ -35,9 +47,20 @@ SpectraVault gives your team one workspace to organize documents, review work, a
 - **Request approvals.** Use **Workflows** to send documents for review, see pending decisions, and follow their history.
 - **Stay in touch.** Keep work notes and reminders in **Notes** and use **Chat** for direct messages or group conversations.
 
+### Choose a sharing option
+
+```mermaid
+flowchart TD
+    Task{"What do you want to do?"}
+    Task -->|Work with teammates| Internal["Share within the organization"]
+    Task -->|Send selected files| Links["Shared Links"]
+    Task -->|Collect documents| Requests["External Shared Links"]
+    Task -->|Show a curated collection| Presentation["Presentations"]
+```
+
 ## 🏢 Manage your organization
 
-The **Organization Owner** manages the workspace. Members can open pages and take actions according to their assigned permissions and the features available to their organization.
+The **Organization Owner** manages the workspace and can transfer ownership to an eligible member who accepts the request. Members can open pages and take actions according to their assigned permissions and the features available to their organization.
 
 | Area | What you can do |
 | --- | --- |
@@ -48,23 +71,21 @@ The **Organization Owner** manages the workspace. Members can open pages and tak
 | **Activity Log** | Review recorded changes to files, membership, and settings when you have access. |
 | **Data Export** | Download a record of organization data and settings. Download the documents you want to keep separately. |
 
+## 🗓️ Plans and renewals
+
+**License and Billing** shows your organization's current term, available offers, and renewal requests. A new organization can start with a 30-day Trial. After a trial or paid term ends, the seven-day grace period gives the team time to renew before regular workspace access ends.
+
+The Organization Owner and members with billing management permission can request an available monthly or annual offer and withdraw a pending request. Monthly renewal can be turned off while the current term continues.
+
+After grace ends, members can contact support from **Account Access**. Members with billing access can also review subscription options.
+
 ## 🚀 Get started
 
 1. Open [SpectraVault](https://vault.spectraeye.app/).
-2. If you received an invitation, follow it to join your organization. To set up a workspace, choose **Create Organization** when it is available, confirm your email, and complete the steps shown.
-3. Open **Help** inside Vault to learn how to work with files, manage your team, and use the features available to your role.
+2. If you received an invitation, follow it to join your organization. To set up a workspace, choose **Create Organization** when it is available, confirm your email, and complete the account setup shown. If the message does not arrive, use **Resend confirmation email** when it becomes available.
+3. Open **Help** inside Vault and search for a chapter or topic by title, description, or the steps it contains.
 
 Check notifications for activity that needs your attention. For a product issue, use **Report a Bug** and follow replies in the same conversation.
-
-## ✨ Changes in the staging release
-
-> These changes are deployed to staging. Availability in production depends on the production release.
-
-- **Workspace setup** includes confirmation email resend and guided account setup before workspace access.
-- **Ownership transfer** lets the Organization Owner nominate an eligible member. The recipient accepts before ownership changes.
-- **License and Billing** shows the current term, renewal offers, and request status. New organizations start with a 30-day Trial, and trial and paid terms have a seven-day grace period after expiry. Members with billing management permission can request a monthly or annual offer where available. Monthly renewal can be turned off while the current term continues.
-- **Access after expiry** lets members contact support from the limited-access page. Members with billing access can also review subscription options.
-- **Searchable Help** finds chapters and topics by title, description, and instructions.
 
 ---
 
