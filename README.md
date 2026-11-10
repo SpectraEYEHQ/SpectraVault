@@ -8,7 +8,9 @@
   <a href="https://vault.spectraeye.app/">Open SpectraVault</a> ·
   <a href="#-work-with-documents">Documents</a> ·
   <a href="#-workflows-and-approvals">Approvals</a> ·
-  <a href="#-share-and-collaborate">Sharing</a> ·
+  <a href="#internal-sharing">Internal sharing</a> ·
+  <a href="#external-sharing">External sharing</a> ·
+  <a href="#public-presentations">Public presentations</a> ·
   <a href="#-manage-your-organization">Organization</a> ·
   <a href="#-get-started">Get started</a>
 </p>
@@ -61,26 +63,43 @@ flowchart TD
 
 ## 🤝 Share and collaborate
 
-### Share or collect files
+| What you need | Where to go |
+| --- | --- |
+| Give teammates access to files or folders | [Internal sharing](#internal-sharing) |
+| Send selected files to people outside your organization | [External sharing](#external-sharing) |
+| Collect uploads from people outside your organization | [External file requests](#external-file-requests) |
+| Present an ordered collection of documents, media, or albums | [Public presentations](#public-presentations) |
 
-- **Share with teammates.** Give people access to files and folders according to their roles, groups, and item permissions.
-- **Send files to external recipients.** Use **Shared Links** to send selected files. Review expiry, download limits, and available activity before extending or revoking a link.
-- **Collect files from external recipients.** Use **External Shared Links** to create a file request for a destination folder. Review incoming uploads and use request presets when you want to reuse the same choices.
+### Internal sharing
+
+Share files or folders with people in your organization. Use the available item permissions to choose which teammates or groups can access the material. Their workspace permissions and your organization's sharing rules apply.
+
+Use internal sharing for ongoing work such as a project folder or a document a colleague needs to review. Teammates open shared material from their own workspace.
+
+### External sharing
+
+Use **Shared Links** to send selected files to clients, partners, or other external recipients. Recipients open the link without joining your organization and can download the files according to the link's settings.
+
+Set an expiry date or download limit where available. Review link activity, then extend or revoke the link when delivery ends.
+
+### External file requests
+
+Use **External Shared Links** to collect documents from outside your organization. Create a file request for a destination folder and send the upload link to the recipient. Review the incoming files in Vault and use presets when you want to reuse the same request settings.
+
+### Public presentations
+
+Use **Presentations** to create a public viewing page with selected files or albums in a specific order. Preview the recipient's view, publish the presentation, and share its public link. Update, unpublish, or archive it when the content or purpose changes.
+
+Where enabled, add polls, quizzes, or surveys and review available views, reactions, comments, and responses.
 
 ```mermaid
 flowchart TD
     Task{"What do you want to do?"}
-    Task -->|Work with teammates| Internal["Share within the organization"]
-    Task -->|Send selected files| Links["Shared Links"]
-    Task -->|Collect documents| Requests["External Shared Links"]
-    Task -->|Show a curated collection| Presentation["Presentations"]
+    Task -->|Work with teammates| Internal["Internal sharing"]
+    Task -->|Send selected files outside the organization| Links["Shared Links"]
+    Task -->|Collect uploads from outside the organization| Requests["External Shared Links"]
+    Task -->|Show a curated collection| Presentation["Public presentations"]
 ```
-
-### Presentations
-
-Arrange selected files or albums in a public presentation. Preview the recipient's view before sharing, then update, unpublish, or archive the presentation when the material changes.
-
-Where enabled, add polls, quizzes, or surveys. Review available views, reactions, comments, and responses to see how people interact with the presentation.
 
 ## 💬 Notes, chat, and notifications
 
