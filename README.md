@@ -7,9 +7,9 @@
 <p align="center">
   <a href="https://vault.spectraeye.app/">Open SpectraVault</a> ·
   <a href="#-work-with-documents">Documents</a> ·
-  <a href="#-share-and-collaborate">Collaboration</a> ·
+  <a href="#-workflows-and-approvals">Approvals</a> ·
+  <a href="#-share-and-collaborate">Sharing</a> ·
   <a href="#-manage-your-organization">Organization</a> ·
-  <a href="#-plans-and-renewals">Plans and renewals</a> ·
   <a href="#-get-started">Get started</a>
 </p>
 
@@ -17,14 +17,18 @@
 
 ## 📘 Introduction
 
-SpectraVault gives your team one workspace to organize documents, review work, and share the right materials with the right people. Use it to keep everyday files easy to find, route documents for approval, and manage access as your team grows.
+SpectraVault gives your organization one workspace for files, review decisions, and external delivery. A team can collect documents, organize them, route them for approval, and follow up on what happened after sharing. Available features and actions depend on your organization's settings, plan, and assigned permissions.
 
 ## 📂 Work with documents
 
-- **Organize and find files.** Browse folders in list or grid view, find files with search and filters, and add frequently used items to **Pinned**. Select several items to apply the same action to them.
-- **Review versions.** Preview supported file types and use version history to review, compare, or restore earlier copies when you have permission.
-- **Label your work.** Use tags and classifications to help teammates find documents and understand how they should be handled.
-- **Manage the file lifecycle.** Import supported archives, move material out of active work with **Archives**, and restore deleted items from **Trash** during your organization's retention period.
+| Area | What you can do |
+| --- | --- |
+| **All files** | Upload files to folders, preview supported formats, and download individual files or a selection. Switch between list and grid views and choose which columns to show. |
+| **Find and organize** | Search and filter files, revisit recent items, or use **Pinned** for personal shortcuts. Use tags and classifications to make documents easier to find and handle consistently. |
+| **File actions** | Rename, move, tag, archive, or trash selected items when permitted. Lock a file when changes need to be limited. |
+| **Versions and duplicates** | Review, compare, or restore earlier versions when available. For a duplicate upload, choose the offered action, such as skipping it, replacing the file, adding a version, or renaming it. |
+| **Archives and Trash** | Import supported archives or package selected files. Keep material in **Archives** outside active work, and restore deleted items from **Trash** within the retention period. |
+| **Operations** | Follow the progress of uploads, archive tasks, and download packages when they take time to finish. |
 
 ### Document lifecycle
 
@@ -38,16 +42,30 @@ flowchart TD
     Trash --> Restore["Restore during the retention period"]
 ```
 
+## 🧭 Workflows and approvals
+
+- Create reusable approval templates with one or more steps. Start a workflow from selected files and add context or a due date when needed.
+- Open **Pending approvals** to review assigned work. Approve, reject with a reason, or request changes. Add decision attachments where available.
+- Follow active workflows and their history. Use **Workflow Storage** to find files associated with approval work.
+- Set out-of-office delegation for a defined period when you need a teammate to cover assigned approvals.
+- Configure review rules for activities such as external uploads, archive actions, or file removal where your organization uses those policies. Assigned approvers can receive notifications.
+
+```mermaid
+flowchart TD
+    Files["Select files"] --> Template["Choose an approval template"]
+    Template --> Review["Approver reviews the files"]
+    Review -->|Approve| Accepted["Continue to the next step or complete approval"]
+    Review -->|Request changes| Changes["Send feedback to the requester"]
+    Review -->|Reject| Rejected["Record the reason and notify the requester"]
+```
+
 ## 🤝 Share and collaborate
 
-- **Share with teammates.** Give access to files and folders according to roles, group memberships, and item permissions.
-- **Send selected files.** Use **Shared Links** for external recipients. Review expiry, download limits, and available link activity before extending or revoking access.
-- **Collect documents.** Open **External Shared Links** to create a file request. Recipients can upload documents into a folder you choose.
-- **Present selected materials.** Use **Presentations** to arrange files or albums for an external audience. Review views, comments, and responses where those options are enabled.
-- **Request approvals.** Use **Workflows** to send documents for review, see pending decisions, and follow their history.
-- **Stay in touch.** Keep work notes and reminders in **Notes** and use **Chat** for direct messages or group conversations.
+### Share or collect files
 
-### Choose a sharing option
+- **Share with teammates.** Give people access to files and folders according to their roles, groups, and item permissions.
+- **Send files to external recipients.** Use **Shared Links** to send selected files. Review expiry, download limits, and available activity before extending or revoking a link.
+- **Collect files from external recipients.** Use **External Shared Links** to create a file request for a destination folder. Review incoming uploads and use request presets when you want to reuse the same choices.
 
 ```mermaid
 flowchart TD
@@ -58,34 +76,57 @@ flowchart TD
     Task -->|Show a curated collection| Presentation["Presentations"]
 ```
 
+### Presentations
+
+Arrange selected files or albums in a public presentation. Preview the recipient's view before sharing, then update, unpublish, or archive the presentation when the material changes.
+
+Where enabled, add polls, quizzes, or surveys. Review available views, reactions, comments, and responses to see how people interact with the presentation.
+
+## 💬 Notes, chat, and notifications
+
+- Use **Notes** for work notes and reminders you want to revisit.
+- Use **Chat** for direct messages or group conversations. Mute a conversation when you want fewer notifications from it.
+- Check notifications for assigned approvals, reminders, and support replies. Use product surveys or the feedback option in **Help** to share your experience.
+
+## 📊 Dashboard, reports, and activity
+
+- Open **Dashboard** for an overview of storage, shared links, and work that needs attention.
+- Use **Reports** to review available trends such as storage growth, downloads, external uploads, sharing, and retention activity. Filter by date when comparing periods.
+- In **Activity Log**, filter recorded changes by date, member, action, or item to see what changed in your workspace.
+
 ## 🏢 Manage your organization
 
-The **Organization Owner** manages the workspace and can transfer ownership to an eligible member who accepts the request. Members can open pages and take actions according to their assigned permissions and the features available to their organization.
+The **Organization Owner** manages the workspace. Members can use the pages and actions granted by their assigned permissions.
 
 | Area | What you can do |
 | --- | --- |
-| **Team** | Invite colleagues, review pending invitations, and manage member access where permitted. |
-| **Roles and groups** | Choose built-in or custom roles and organize members into groups for shared work. |
-| **Organization Settings** | Manage branding, sharing rules, retention, and notifications where your role allows. |
-| **Dashboard and Reports** | Review workspace activity, storage use, and available sharing and download trends. |
-| **Activity Log** | Review recorded changes to files, membership, and settings when you have access. |
-| **Data Export** | Download a record of organization data and settings. Download the documents you want to keep separately. |
+| **Team** | Invite colleagues and choose their roles. Resend or revoke pending invitations, and change member access where permitted. |
+| **Roles and groups** | Use built-in roles or create custom roles for specific responsibilities. Organize teammates into groups and use group access where supported. |
+| **Ownership transfer** | The Owner can request a transfer to an eligible member. Ownership changes when that member accepts. |
+| **Organization Settings** | Manage workspace details and branding, file and sharing rules, retention, and notifications where your role allows. |
+| **Classifications and Presets** | Maintain the labels your team uses for documents and the reusable defaults for external file requests. |
+| **Storage** | Review used and available space and the limits that apply to your organization. |
+| **Integrations** | Connect your own tools to Vault when your role and workspace allow integration access. |
+| **Data Export** | Download organization records and settings. Save copies of the documents you need separately. |
+
+Authorized members can also close an organization permanently from **Organization Settings** after reviewing and confirming what will be removed.
 
 ## 🗓️ Plans and renewals
 
 **License and Billing** shows your organization's current term, available offers, and renewal requests. A new organization can start with a 30-day Trial. After a trial or paid term ends, the seven-day grace period gives the team time to renew before regular workspace access ends.
 
-The Organization Owner and members with billing management permission can request an available monthly or annual offer and withdraw a pending request. Monthly renewal can be turned off while the current term continues.
+The Owner and members with billing management permission can request an available monthly or annual offer and withdraw a pending request. Monthly renewal can be turned off while the current term continues and turned back on where available.
 
 After grace ends, members can contact support from **Account Access**. Members with billing access can also review subscription options.
 
 ## 🚀 Get started
 
 1. Open [SpectraVault](https://vault.spectraeye.app/).
-2. If you received an invitation, follow it to join your organization. To set up a workspace, choose **Create Organization** when it is available, confirm your email, and complete the account setup shown. If the message does not arrive, use **Resend confirmation email** when it becomes available.
-3. Open **Help** inside Vault and search for a chapter or topic by title, description, or the steps it contains.
+2. Follow your invitation to join an organization. To set up a workspace, choose **Create Organization** when it is available, confirm your email, and complete the account setup shown. Use **Resend confirmation email** if the message does not arrive and the option is available.
+3. Open **Account Settings** to update your display name, profile photo, timezone, or date preferences.
+4. Open **Help** and search for a chapter or topic by title, description, or the steps it contains.
 
-Check notifications for activity that needs your attention. For a product issue, use **Report a Bug** and follow replies in the same conversation.
+For a product issue, use **Report a Bug** and follow replies in the same conversation.
 
 ---
 
